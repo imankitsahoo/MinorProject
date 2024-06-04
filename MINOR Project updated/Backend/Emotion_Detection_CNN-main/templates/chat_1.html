@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <!-- Link to the permission popup CSS -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f2ee; /* Background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Popup container */
+        .popup-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Popup content */
+        .popup-content {
+            text-align: center;
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #allowBtn {
+            background-color: #5c9d7a;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+        }
+
+        #denyBtn {
+            background-color: #5c9d7a;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* Scanning message */
+        #scanningMessage {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Result display */
+        #prediction {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Permission popup container -->
+    <div class="popup-container" id="permissionPopup">
+        <div class="popup-content">
+            <h2>Permission Request</h2>
+            <p>We would like to track your emotions.</p>
+            <button id="allowBtn">Allow</button>
+            <button id="denyBtn">Deny</button>
+        </div>
+    </div>
+
+    <!-- Scanning message -->
+    <div id="scanningMessage">Currently scanning, please wait...</div>
+
+    <!-- Result display -->
+    <p id="prediction"></p>
+
+    <!-- Script to handle the permission popup and emotion detection -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to start emotion detection
+            function startEmotionDetection() {
+                // Show scanning message
+                $('#scanningMessage').show();
+
+                // Start scanning for emotions
+                $.ajax({
+                    type: 'GET',
+                    url: '/get_prediction',
+                    success: function(data) {
+                        // Hide scanning message
+                        $('#scanningMessage').hide();
+                        // Display the predicted emotion
+                        $('#prediction').text('Predicted Emotion: ' + data.emotion);
+                        // Display recommended videos
+                        var recommendedVideos = data.recommended_videos;
+                        if (recommendedVideos && recommendedVideos.length > 0) {
+                            $('#prediction').append('<br>Recommended Videos:');
+                            for (var i = 0; i < recommendedVideos.length; i++) {
+                                $('#prediction').append('<br><a href="' + recommendedVideos[i] + '">' + recommendedVideos[i] + '</a>');
+                            }
+                        }
+                    }
+                });
+
+                // Stop the webcam stream after 10 seconds
+                setTimeout(function() {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/stop_scanning',
+                        success: function() {
+                            console.log('Scanning stopped.');
+                        }
+                    });
+                }, 10000);
+            }
+
+            // Event listener for the "Allow" button
+            $('#allowBtn').click(function() {
+                // Hide the permission popup
+                $('#permissionPopup').hide();
+                // Start emotion detection
+                startEmotionDetection();
+            });
+
+            // Event listener for the "Deny" button
+            $('#denyBtn').click(function() {
+                // Close the window if permission is denied
+                window.close();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Emotion Tracker- Track and explore your moods effortlessly.",
+  "version": "0.0.1",
+  "description": "Navigate Your Emotions: Track, Reflect, and Thrive.Unlock a deeper understanding of your emotions.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index-EXT.html",
+    "default_icon": "logo1.png"
+  },
+  "icons": {
+    "128": "logo1.png"
+  },
+  "permissions": ["storage", "contextMenus", "downloads", "activeTab"],
+  "background": {
+    "service_worker": "service_worker.js"
+  }
+}

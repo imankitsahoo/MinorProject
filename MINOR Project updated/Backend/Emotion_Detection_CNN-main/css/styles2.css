@@ -1,0 +1,313 @@
+.body {
+  background-color: #f1f2ee;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-fluid {
+  background-color: #f1f2ee;
+}
+
+.nav {
+  padding-top: 7%;
+  position: fixed;
+}
+
+/* landing page design */
+.landing-elipse {
+  position: absolute;
+  top: 320px;
+}
+
+.landing-mobile {
+  position: absolute;
+  right: 120px;
+  top: 200px;
+}
+
+.laptop {
+  height: 400px;
+  width: 600px;
+}
+
+.big-heading-1 {
+  margin-top: 100px;
+  text-align: left;
+  font-size: 3rem;
+  color: #1b4332;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.big-heading {
+  text-align: left;
+  font-size: 3rem;
+  color: #5c9d7a;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.small-para {
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.download-button {
+  margin: 2% 3% 5% 3%;
+  background-color: #5c9d7a;
+  padding: 15px 35px 15px 35px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.row-1 {
+  padding-top: 10%;
+  padding-left: 10%;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-item {
+  height: 46px;
+  width: 82px;
+  margin: 10px 10px 10px 10px;
+}
+
+.navbar {
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #f1f2ee;
+  border-top: 10%;
+  position: fixed;
+}
+
+.btn1 {
+  background-color: #5c9d7a;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border: 0px;
+}
+
+.big-heading-features {
+  font-size: 3rem;
+  color: #5c9d7a;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.features {
+  padding-top: 677px;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.icon-1 {
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.icon-2 {
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.icon-3 {
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.icon-4 {
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.icon-5 {
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.img1 {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.left-aligned-text {
+  padding-left: 50px;
+  padding-right: 80px;
+  margin-left: 30px;
+}
+
+.contact {
+  padding-top: 150px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.GIT {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.text-got {
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
+.form-group {
+  padding: 20px 20px 20px 20px;
+}
+
+.input {
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  border: 1px solid;
+  background-color: #f1f2ee;
+}
+
+.input-3 {
+  border-radius: 10px;
+  width: 300px;
+  height: 100px;
+  border: 1px solid;
+  background-color: #f1f2ee;
+}
+
+.contact-email {
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 200px;
+  text-align: left;
+}
+
+.email {
+  float: left;
+}
+
+.form {
+  padding: 50px 50px 50px 50px;
+}
+
+.footer {
+  background-color: #081c15;
+  color: white;
+  padding: 100px 100px 100px 100px;
+  border: 0;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.company {
+  text-align: center;
+}
+
+.links {
+  display: block;
+  text-align: center;
+}
+
+.link {
+  color: white;
+  display: block;
+  line-height: 2rem;
+}
+
+/* Responsive CSS code */
+
+@media only screen and (max-width: 600px) {
+  .big-heading-1,
+  .big-heading,
+  .big-heading-features {
+    font-size: 2rem;
+  }
+
+  .landing-mobile {
+    right: 20px;
+    top: 100px;
+  }
+
+  .laptop {
+    height: 200px;
+    width: 300px;
+  }
+
+  .features {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .icon-1,
+  .icon-2,
+  .icon-3,
+  .icon-4,
+  .icon-5 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-email {
+    padding-left: 50px;
+    width: 80%;
+  }
+
+  .text-got {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .input,
+  .input-3 {
+    width: 80%;
+  }
+
+  .footer {
+    padding: 50px 50px 50px 50px;
+  }
+}

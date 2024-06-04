@@ -1,0 +1,57 @@
+/* popup.css */
+.body_ext {
+  width: 400px;
+  height: 400px;
+  background-color: #f1f2ee;
+  text-align: center;
+}
+
+#enableExtensionBtn {
+  margin: 2% 2% 5% 3%;
+  background-color: #5c9d7a;
+  padding: 15px 35px 15px 35px;
+  border: 0px;
+  border-radius: 20px;
+  margin-top: 10%;
+}
+
+#enableExtensionBtn:hover {
+  color: #fff;
+  background-color: #5c9d7a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#gotoWebsite {
+  margin: 2% 3% 5% 2%;
+  background-color: #5c9d7a;
+  padding: 15px 35px 15px 35px;
+  border: 0px;
+  border-radius: 20px;
+}
+#gotoWebsite:hover {
+  color: #fff;
+  background-color: #5c9d7a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.big-heading {
+  padding-top: 20%;
+  text-align: center;
+  font-size: 2rem;
+  color: #1b4332;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.big-heading-1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1b4332;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
